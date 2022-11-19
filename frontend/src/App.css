@@ -16,6 +16,8 @@ body {
     margin: 1% 10%;
     background-color: #13131F;  
     color: white;
+    font-family: sans-serif;
+    letter-spacing: -0.013em;
 }
 
 .container {

@@ -3,6 +3,7 @@ import Main from './pages/Main';
 import Wallet from './pages/Wallet';
 import Enter from './pages/Enter';
 import Register from './pages/Register';
+import Graph from './pages/Graph';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/wallet" element={<Wallet />} />
                     <Route path="/enter" element={<Enter />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/graph" element={<Graph />} />
                 </Routes>
             </div>
         </div>

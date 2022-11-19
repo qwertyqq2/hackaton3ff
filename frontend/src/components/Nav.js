@@ -1,11 +1,11 @@
 import './Nav.css';
-import {Link, useMatch, useResolvedPath} from 'react-router-dom'
+import {Link, useMatch, useResolvedPath} from 'react-router-dom';
 import SidePanel from './SidePanel';
 import React, { useState } from 'react';
 import UserStatus from '../State';
 
 const NavbarWithLink = () => {
-    console.log("Nav ", UserStatus.getStatus());
+    //console.log("Nav ", UserStatus.getStatus());
     const [userActive, setUserActive] = useState(UserStatus.getStatus());
 
     let isUserEnter = userActive;
