@@ -36,11 +36,11 @@ func (h *handler) Register(router *httprouter.Router) {
 }
 
 func (h *handler) GetList(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	log.Println("Request here!")
 	users, err := h.store.Repository().GetUsers()
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	w.Header().Set("Content-Type", "application/json")
 	json_user, err := json.Marshal(users)
 	if err != nil {
@@ -133,10 +133,4 @@ func (h *handler) GetUser(w http.ResponseWriter, r *http.Request) {
 	log.Println("Get user...")
 	idCook, statusCook := r.Cookies()[0], r.Cookies()[1]
 	w.Write([]byte(fmt.Sprintf("User: %s, %s", idCook.Value, statusCook.Value)))
-
-	//var user *auth.ResultClaims
-
-	//mapstructure.Decode(claims.(jwt.MapClaims), &user)
-	//fmt.Println(user)
-	//w.Write([]byte(fmt.Sprintf("User: %d, %s", user.UserId, user.Status)))
 }
