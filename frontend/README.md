@@ -1,6 +1,7 @@
 npm i react-router-dom\
 npm install mysql\
-npm install request
+npm install request\
+npm install chart.js
 
 
 # Getting Started with Create React App
