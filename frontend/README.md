@@ -1,6 +1,6 @@
 npm i react-router-dom\
 npm install mysql\
-npm install request\
+npm install request
 
 
 # Getting Started with Create React App
